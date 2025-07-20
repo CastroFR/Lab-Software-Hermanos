@@ -1,0 +1,81 @@
+
+/* 
+
+╭━━━╮╱╱╱╱╱╭╮
+┃╭━╮┃╱╱╱╱╭╯╰┳╮
+┃┃╱╰╋━━┳━┻╮╭┻╋━━╮
+┃┃╭━┫╭╮┃╭╮┃┃╭┫╭╮┃
+┃╰┻━┃╰╯┃╭╮┃╰┫┃╭╮┃
+╰━━━┻━━┻╯╰┻━┫┣╯╰╯
+╱╱╱╱╱╱╱╱╱╱╱╭╯┃
+╱╱╱╱╱╱╱╱╱╱╱╰━╯
+
+*/
+/* 
+Estilos para la pagina de contactos
+*/
+
+/* 
+Definir la paleta de colres a usar en esta pagina
+*/
+
+:root{
+    --color-primario: #E0D92F;
+    --color-secundario: #E0D53C;
+    --color-terciario: #000;
+}
+
+/* Temporal mientras se crea el menu */
+header{
+    background-color: #3b3b22;
+    height: 10dvh;
+}
+
+.main-wrapper{
+    width: 100dvw;
+    height: 80dvh;
+    background-color: var(--color-terciario);
+    display: flex;
+    overflow: hidden;
+}
+
+.main-wrapper .imagen{
+    width: 30%;
+    background: url(https://tse3.mm.bing.net/th/id/OIP.yxYYO9yaQNXRvuWY_4f_8gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
+    background-size: cover;
+}
+.main-wrapper .texto-contenedor{
+    background-color: var(--color-primario);
+    height: 100%;
+    width: 70%;
+    transform: translateX(1000px);
+    opacity: 0;
+    transition: all 1s ease-in;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main-wrapper .texto-contenedor .titulo{
+    font-size: 3em;
+}
+
+/* Pantallas peques */
+@media (max-width : 500px){
+
+    .main-wrapper{
+        height: 80dvh;
+        display: inherit;
+        flex-direction: column;
+    }
+    .main-wrapper .texto-contenedor{
+        width: 100dvw;
+    }
+    .main-wrapper .texto-contenedor .titulo{
+        font-size: 1.5em;
+    }
+
+    .main-wrapper .texto-contenedor h2 ~ h3{
+        font-size: 1.2em;
+    }
+
+
+}
