@@ -1,0 +1,124 @@
+/* Reset básico para que no haya margen ni padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hacer que body use flex y ocupe toda la pantalla */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 2.5em;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  margin: 0 15px;
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+main {
+  background-color: #ffeb00;
+  flex: 1;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+#servicios .contenido-servicios {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  justify-items: center;
+}
+
+.titulo {
+  justify-items: center;
+}
+
+
+#lista-servicios {
+  color:#fff;
+  flex: 1 1 50%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#lista-servicios li {
+  background-color: black;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+.imagen-servicio {
+  flex: 1 1 50%;
+  display: flex;
+}
+
+
+.imagen-servicio img {
+  max-height: 100vh;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+footer {
+  color:#fff;
+  background-color: #000000;
+  text-align: center;
+  padding: 15px;
+  font-weight: bold;
+}
