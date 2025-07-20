@@ -1,0 +1,83 @@
+/* Variables de colores */
+:root {
+    --primary: #E0D92F;  /* Amarillo vibrante como color primario */
+    --primary-dark: #E0D53C;  /* Amarillo más oscuro para hover/efectos */
+    --text-dark: #141414;  /* Casi negro para texto principal */
+    --light-accent: #E1D877;  /* Amarillo claro para fondos/acentos suaves */
+    --pure-black: #000000;  /* Negro puro para detalles */
+    --white: #ffffff;  /* Blanco para contrastes */
+    --dark-bg: #1a1a1a;  /* Fondo oscuro derivado del negro */
+    --footer-text: #cccccc;  /* Texto claro para footer */
+}
+
+
+/* Navbar */
+.navbar {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+}
+
+.navbar-brand, 
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    background-color: var(--text-dark);
+}
+
+.btn-download {
+    background-color: var(--text-dark);
+    color: var(--primary);
+}
+
+.btn-download:hover {
+    background-color: var(--pure-black);
+}
+
+
+
+/* Download Seccion */
+.download-section {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+    color: var(--text-dark);
+}
+
+.btn-download-app {
+    background-color: var(--text-dark);
+    color: var(--primary);
+}
+
+.btn-download-app:hover {
+    background-color: var(--pure-black);
+}
+
+/* Footer */
+.footer {
+    background-color: var(--pure-black);
+}
+
+.footer-title {
+    color: var(--white);
+}
+
+.footer-links a {
+    color: var(--footer-text);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.social-links a {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary);
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    color: var(--text-dark);
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.5);
+}
