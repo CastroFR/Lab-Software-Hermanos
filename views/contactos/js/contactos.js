@@ -22,7 +22,7 @@ setTimeout(() => {
 textoContenedor.innerHTML += `
     <h2 class='text-center pt-4 pb-4 text-wrap'>Calle roja, 56, C.P. 35.66 Corralejo.</h2>
     <h3 class='text-center pt-4 pb-4 text-wrap'>laboratorioHermanos@email.com</h3>
-    <section id="redesSociales" class='text-center fs-3'>
+    <section id="redesSociales" class=' redesSociales text-center fs-3'>
         <a class='text-decoration-none m-4' href="https://www.instagram.com" target="_blank">
             <i class="bi bi-instagram text-danger"></i>
         </a>

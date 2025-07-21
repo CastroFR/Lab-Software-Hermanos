@@ -38,6 +38,13 @@ Definir la paleta de colres a usar en esta pagina
     width: 30%;
     background: url(https://tse3.mm.bing.net/th/id/OIP.yxYYO9yaQNXRvuWY_4f_8gHaE8?rs=1&pid=ImgDetMain&o=7&rm=3);
     background-size: cover;
+    background-position: center;
+    transition: all .7s linear;
+}
+
+.main-wrapper .imagen:hover{
+    transform: scale(1.11);
+    box-shadow: inset 1px 1px 10px black;
 }
 .main-wrapper .texto-contenedor{
     background-color: var(--color-primario);
@@ -73,6 +80,10 @@ Definir la paleta de colres a usar en esta pagina
 
     .main-wrapper .texto-contenedor h2 ~ h3{
         font-size: 1.2em;
+    }
+
+    .main-wrapper .texto-contenedor .redesSociales{
+        display: none;
     }
 
 
