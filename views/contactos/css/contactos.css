@@ -25,11 +25,6 @@ Definir la paleta de colres a usar en esta pagina
     --color-terciario: #000;
 }
 
-/* Temporal mientras se crea el menu */
-header{
-    background-color: #3b3b22;
-    height: 10dvh;
-}
 
 .main-wrapper{
     width: 100dvw;
@@ -58,6 +53,9 @@ header{
     font-size: 3em;
 }
 
+.footer{
+    height: 20dvh;
+}
 /* Pantallas peques */
 @media (max-width : 500px){
 
