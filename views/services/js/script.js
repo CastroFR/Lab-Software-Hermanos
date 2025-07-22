@@ -1,9 +1,10 @@
+
 // Lista inicial de servicios del laboratorio
 const servicios = [
-  "Análisis de sangre",
-  "Pruebas de orina",
-  "Pruebas de glucosa",
-  "Examen de colesterol"
+  "Desarrollo a medida de software",
+  "Consultoría tecnológica",
+  "Optimización y refactorización de código",
+  "Integración de sistemas"
 ];
 
 // Referencias al DOM
