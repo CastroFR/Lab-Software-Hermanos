@@ -1,0 +1,90 @@
+
+/* 
+
+╭━━━╮╱╱╱╱╱╭╮
+┃╭━╮┃╱╱╱╱╭╯╰┳╮
+┃┃╱╰╋━━┳━┻╮╭┻╋━━╮
+┃┃╭━┫╭╮┃╭╮┃┃╭┫╭╮┃
+┃╰┻━┃╰╯┃╭╮┃╰┫┃╭╮┃
+╰━━━┻━━┻╯╰┻━┫┣╯╰╯
+╱╱╱╱╱╱╱╱╱╱╱╭╯┃
+╱╱╱╱╱╱╱╱╱╱╱╰━╯
+
+*/
+/* 
+Estilos para la pagina de contactos
+*/
+
+/* 
+Definir la paleta de colres a usar en esta pagina
+*/
+
+:root{
+    --color-primario: #E0D92F;
+    --color-secundario: #E0D53C;
+    --color-terciario: #1a1818;
+}
+
+
+.main-wrapper{
+    width: 100dvw;
+    height: 80dvh;
+    background-color: var(--color-terciario);
+    display: flex;
+    overflow: hidden;
+}
+
+.main-wrapper .imagen{
+    width: 30%;
+    background: url(https://thinkwide.in/img/hero_image.png);
+    background-size: cover;
+    background-position: center;
+    transition: all .7s linear;
+}
+
+.main-wrapper .imagen:hover{
+    transform: scale(1.11);
+    box-shadow: inset 1px 1px 10px black;
+}
+.main-wrapper .texto-contenedor{
+    background-color: var(--color-primario);
+    height: 100%;
+    width: 70%;
+    transform: translateX(1000px);
+    opacity: 0;
+    transition: all 1s ease-in;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.main-wrapper .texto-contenedor .titulo{
+    font-size: 3em;
+}
+
+.footer{
+    height: 20dvh;
+}
+/* Pantallas peques */
+@media (max-width : 500px){
+
+    .main-wrapper{
+        height: 80dvh;
+        display: inherit;
+        flex-direction: column;
+    }
+    .main-wrapper .texto-contenedor{
+        width: 100dvw;
+    }
+    .main-wrapper .texto-contenedor .titulo{
+        font-size: 1.5em;
+    }
+
+    .main-wrapper .texto-contenedor h2 ~ h3{
+        font-size: 1.2em;
+    }
+
+    .main-wrapper .texto-contenedor .redesSociales{
+        display: none;
+    }
+
+
+}
