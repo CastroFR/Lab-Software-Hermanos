@@ -1,0 +1,271 @@
+
+/* ======================================
+   1. VARIABLES DE COLOR Y CONFIGURACIÓN
+   ====================================== */
+
+:root{
+  --primary: #E0D92F;  /* Amarillo vibrante como color primario */
+    --primary-dark: #E0D53C;  /* Amarillo más oscuro para hover/efectos */
+    --text-dark: #141414;  /* Casi negro para texto principal */
+    --light-accent: #E1D877;  /* Amarillo claro para fondos/acentos suaves */
+    --pure-black: #000000;  /* Negro puro para detalles */
+    --white: #ffffff;  /* Blanco para contrastes */
+    --dark-bg: #1a1a1a;  /* Fondo oscuro derivado del negro */
+    --footer-text: #cccccc;  /* Texto claro para footer */
+}
+
+/* ====================
+   2. RESET Y ESTILO BASE
+   ==================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hacer que body use flex y ocupe toda la pantalla */
+html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ================
+   3. NAVBAR
+   ================ */
+
+.navbar {
+    background: linear-gradient(to right, var(--primary), var(--primary-dark));
+}
+
+.navbar-brand, 
+.navbar-nav .nav-link {
+    color: var(--text-dark) !important;
+}
+
+.navbar-nav .nav-link:hover::after {
+    background-color: var(--text-dark);
+}
+
+.btn-download {
+    background-color: var(--text-dark);
+    color: var(--primary);
+}
+
+.btn-download:hover {
+    background-color: var(--pure-black);
+}
+
+
+/* =========================
+   4. LAYOUT Y COMPONENTES
+   ========================= */
+
+main {
+  background-color: #ffeb00;
+  flex: 1;
+  padding: 30px 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+#servicios .contenido-servicios {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+  justify-items: center;
+}
+
+.titulo {
+  justify-items: center;
+}
+
+
+#lista-servicios {
+  color:#fff;
+  flex: 1 1 50%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  
+}
+
+#lista-servicios li {
+  background-color: var(--text-dark);
+  color: var(--primary);
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#lista-servicios li:hover {
+ background-color: var(--pure-black);
+}
+
+.imagen-servicio {
+  flex: 1 1 50%;
+  display: flex;
+}
+
+
+.imagen-servicio img {
+  max-height: 100vh;
+  width: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+h2 {
+  font-size: 1.8em;
+  color: #000;
+  margin-bottom: 10px;
+}
+
+
+
+button {
+  background-color: #000;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+#agregar-servicio {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+#agregar-servicio:hover {
+  background-color: var(--primary-dark);
+  color: var(--text-dark);
+  transform: translateY(-2px);
+}
+
+/* ===================
+   5. FOOTER
+   =================== */
+
+
+.footer {
+    background-color: var(--pure-black);
+}
+
+.footer-title {
+    color: var(--white);
+}
+
+.footer-links a {
+    color: var(--footer-text);
+}
+
+.footer-links a:hover {
+    color: var(--primary);
+}
+
+.social-links a {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--primary);
+}
+
+.social-links a:hover {
+    background-color: var(--primary);
+    color: var(--text-dark);
+}
+
+.copyright {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ==========================
+   6. MEDIA QUERIES RESPONSIVE
+   ========================== */
+
+/* Pantallas de hasta 1024px (tablets) */
+@media (max-width: 1024px) {
+  
+  #servicios .contenido-servicios {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imagen-servicio img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+  }
+
+  #lista-servicios {
+    width: 100%;
+  }
+}
+
+/* Pantallas de hasta 768px (móviles grandes) */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  button {
+    width: 100%;
+    font-size: 1em;
+    padding: 12px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+  }
+
+  .btn-download {
+    width: 100%;
+  }
+
+  .footer .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-links {
+    padding-left: 0;
+  }
+}
+
+/* Pantallas muy pequeñas (hasta 480px) */
+@media (max-width: 480px) {
+  main {
+    padding: 20px 10px;
+  }
+
+  .imagen-servicio img {
+    max-height: 250px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  #lista-servicios li {
+    font-size: 0.95em;
+  }
+}
+ 
+
